@@ -1,0 +1,35 @@
+.main_button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: cadetblue;
+  font-size: 1rem;
+}
+#clear_button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  color: cadetblue;
+  font-size: 1rem;
+}
+.minor_buttons {
+  width: 20px;
+  height: 15px;
+  margin-left: 10px;
+  line-height: 5px;
+}
+input {
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.container {
+  margin: 20px;
+}
+.indent {
+  margin-top: 10px;
+}
+#amount_uniq_words {
+  font-size: 1.5 rem;
+}
