@@ -12,17 +12,24 @@ function showQuantityUniqWords() {
   }
 
   const separator = " ";
-  const arrayOfStrings = userInput.split(separator);
+  let arrayOfStrings = userInput.split(separator);
+  arrayOfStrings = arrayOfStrings
+    .filter((el) => el)
+    .map((el) => el.toLowerCase());
   const uniqWords = new Set(arrayOfStrings);
   amountUniqWords.textContent = uniqWords.size;
   const wordStatistic = new Map();
   arrayOfStrings.forEach((element) => {
-    if (!wordStatistic.has(element)) {
-      wordStatistic.set(element, 1);
-    } else {
-      wordStatistic.set(element, wordStatistic.get(element) + 1);
+    if (element) {
+      element = element.toLowerCase();
+      if (!wordStatistic.has(element)) {
+        wordStatistic.set(element, 1);
+      } else {
+        wordStatistic.set(element, wordStatistic.get(element) + 1);
+      }
     }
   });
+  input_list.innerHTML = "";
   wordStatistic.forEach((value, key, map) => {
     const li = document.createElement("li");
 
